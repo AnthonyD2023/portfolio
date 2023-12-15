@@ -42,7 +42,8 @@ function setState(buttonID) {
             "•	Eclipse IDE for Java Development, Visual Studio for C, C# and C++, Visual Studio Code for HTML, CSS, JS, PHP Development, PyCharm for Python Development and MySQL Workbench for SQL<br>"+
             "•	Establishing computer networks with VMWare<br>"+
             "•	Gimp and Photoshop for image editing and graphics creation<br>"+
-            "•	Financial Accounting and Business Management in a practical environment<br>"
+            "•	Financial Accounting and Business Management in a practical environment<br>"+
+            "•	Yahtzee game made in JS, HTML, and CSS<br>"
         break
         case 2:
             divBlocks[0].innerHTML = "Anthony Dicaire<br>Achievements / Certifications"

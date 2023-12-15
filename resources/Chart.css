@@ -1,0 +1,160 @@
+* {
+    font-family: cursive; 
+    color: black;
+}
+
+html, body {
+    width: 99.7%;
+    height: 99.45%;
+    background-color: #fc0000;
+}
+
+#container {
+    display: grid;
+    column-gap: 2px;
+    row-gap: 2px;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas: 
+        'score held-dice'
+        'score dice';
+    width: inherit;
+    height: inherit;
+}
+
+#score-card {
+    grid-area: score;
+    background-image: url(resources/score-card-background.png);
+    background-size: cover;
+    width: inherit;
+    height: inherit;
+}
+
+#title {
+    font-size: 32px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 10%;
+    margin-bottom: -70px;
+}
+
+#score-table {
+    margin-top: 30%;
+    background-color: 0x404040;
+    display: grid;
+    margin-left: 5%;
+    column-gap: 2px;
+    grid-template-columns: 75% 20%;
+    grid-template-areas: 
+        'ones ones-score'
+        'twos twos-score'
+        'threes threes-score'
+        'fours fours-score'
+        'fives fives-score'
+        'sixes sixes-score'
+        'bonus bonus-score'
+        'top-total top-total-score'
+        'three-of-a-kind three-of-a-kind-score'
+        'four-of-a-kind four-of-a-kind-score'
+        'full-house full-house-score'
+        'short-straight short-straight-score'
+        'large-straight large-straight-score'
+        'chance chance-score'
+        'yahtzee yahtzee-score'
+        'bottom-total bottom-total-score';
+}
+
+#ones-label { grid-area: ones; }           #ones-score { grid-area: ones-score; }
+#twos-label { grid-area: twos; }           #twos-score { grid-area: twos-score; }
+#threes-label { grid-area: threes; }       #threes-score { grid-area: threes-score; }
+#fours-label { grid-area: fours; }         #fours-score { grid-area: fours-score; }
+#fives-label { grid-area: fives; }         #fives-score { grid-area: fives-score; }
+#sixes-label { grid-area: sixes; }         #sixes-score { grid-area: sixes-score; }
+#bonus-label { grid-area: bonus; }         #bonus-score { grid-area: bonus-score; }
+#top-total-label { grid-area: top-total; } #bottom-total-score { grid-area: top-total-score; }
+
+#three-of-a-kind-label { grid-area: three-of-a-kind; } #three-of-a-kind-score { grid-area: three-of-a-kind-score; }
+#four-of-a-kind-label { grid-area: four-of-a-kind; }  #four-of-a-kind-score { grid-area: four-of-a-kind-score; }
+#full-house-label { grid-area: full-house; }          #full-house-score { grid-area: full-house-score; }
+#short-straight-label { grid-area: short-straight; }  #short-straight-score { grid-area: short-straight-score; }
+#large-straight-label { grid-area: large-straight; }  #large-straight-score { grid-area: large-straight-score; }
+#chance-label { grid-area: chance; }                  #chance-score { grid-area: chance-score; }
+#yahtzee-label { grid-area: yahtzee; }                #yahtzee-score { grid-area: yahtzee-score; }
+#bottom-total-label { grid-area: bottom-total; }      #bottom-total-score { grid-area: bottom-total-score; }
+
+#roll-count-label {
+    font-size: 16px;
+    margin-left: 10%;
+    position: static;
+}
+
+#game-board {
+    grid-area: dice;
+    display: block;
+}
+
+#held-dice {
+    grid-area: held-dice;
+    background-image: url(resources/hold-dice-background.png);
+    background-size: cover;
+    display: block;
+}
+
+#roll-zone {
+    background-image: url(resources/yahtzee-background.png);
+    background-size: cover;
+    display: block;
+}
+
+#score-table {
+    display: grid;
+}
+
+#roll-button {
+    padding-top: 700%;
+    min-width: 700%;
+    border-radius: 50%;
+    background-color: #edede7;
+    border-color: rgb(212, 187, 132);
+}
+
+#redo-button {
+    background-image: url(resources/redo-button.png);
+    border-width: 0px;
+    background-color: #00000000;
+    width: 64px;
+    height: 64px;
+    position: relative;
+    margin-left: 65px;
+    margin-top: 20px;
+    display: none;
+}
+
+button.dice {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    top: 10px;
+    background-image: url(resources/dice.png);
+    background-size: 600% 100%;
+    background-color: #00000000;
+    border-width: 0px;
+    margin-left: 1%;
+}
+
+button.score-element {
+    display: block;
+    min-height: 100%;
+    min-width: 100%;
+    border-width: 0px;
+    background-color: #00000000;
+}
+
+div.grid-element {
+    border: 1px solid #969696; 
+    text-align: center;
+}
+
+@keyframes roll {
+    0% { background-position: 0 0; }
+    100% { background-position: -600% 0; }
+}

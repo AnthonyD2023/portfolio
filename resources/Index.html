@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- Set page data -->
+        <meta charset = "utf-8">
+        
+        <title>Yahtzee</title>
+        
+        <!-- Link resource files -->
+        <link rel = "stylesheet" href = "Chart.css">
+        <link rel = "icon" type = "image/x-icon" href="resources/favicon.ico">
+        <script src = "GameElements.js"></script>
+        <script src = "GameRules.js"></script>
+    </head>
+    <body onload="init()">
+        <div id = "container">
+            
+            <!-- Draw scorecard -->
+            <div id = "score-card">
+                
+                <p id = "title"><b style = "color: #ff0000">YAHTZEE!</b></p>
+
+                <div id = "score-table">
+                    <div id = "ones-label" class = "grid-element">Ones</div>                       <div id = "ones-score" class = "grid-element"><button id = "ones-button" class = "score-element" onclick="clickScore(0)"></button></div>
+                    <div id = "twos-label" class = "grid-element">Twos</div>                       <div id = "twos-score" class = "grid-element"><button id = "twos-button" class = "score-element" onclick="clickScore(1)"></button></div>
+                    <div id = "threes-label" class = "grid-element">Threes</div>                   <div id = "threes-score" class = "grid-element"><button id = "threes-button" class = "score-element" onclick="clickScore(2)"></button></div>
+                    <div id = "fours-label" class = "grid-element">Fours</div>                     <div id = "fours-score" class = "grid-element"><button id = "fours-button" class = "score-element" onclick="clickScore(3)"></button></div>
+                    <div id = "fives-label" class = "grid-element">Fives</div>                     <div id = "fives-score" class = "grid-element"><button id = "fives-button" class = "score-element" onclick="clickScore(4)"></button></div>
+                    <div id = "sixes-label" class = "grid-element">Sixes</div>                     <div id = "sixes-score" class = "grid-element"><button id = "sixes-button" class = "score-element" onclick="clickScore(5)"></button></div>
+                    <div id = "bonus-label" class = "grid-element">Bonus</div>                     <div id = "bonus-score" class = "grid-element"></div>
+                    <div id = "top-total-label" class = "grid-element">Top Total</div>             <div id = "top-total-score" class = "grid-element"></div>
+    
+                    <div id = "three-of-a-kind-label" class = "grid-element">Three of a Kind</div> <div id = "three-of-a-kind-score" class = "grid-element"><button id = "three-of-a-kind-button" class = "score-element" onclick="clickScore(6)"></button></div>
+                    <div id = "four-of-a-kind-label" class = "grid-element">Four of a Kind</div>   <div id = "four-of-a-kind-score" class = "grid-element"><button id = "four-of-a-kind-button" class = "score-element" onclick="clickScore(7)"></button></div>
+                    <div id = "full-house-label" class = "grid-element">Full House</div>           <div id = "full-house-score" class = "grid-element"><button id = "full-house-button" class = "score-element" onclick="clickScore(8)"></button></div>
+                    <div id = "short-straight-label" class = "grid-element">Short Straight</div>   <div id = "short-straight-score" class = "grid-element"><button id = "short-straight-button" class = "score-element" onclick="clickScore(9)"></button></div>
+                    <div id = "large-straight-label" class = "grid-element">Large Straight</div>   <div id = "large-straight-score" class = "grid-element"><button id = "large-straight-button" class = "score-element" onclick="clickScore(10)"></button></div>
+                    <div id = "chance-label" class = "grid-element">Chance</div>                   <div id = "chance-score" class = "grid-element"><button id = "chance-button" class = "score-element" onclick="clickScore(11)"></button></div>
+                    <div id = "yahtzee-label" class = "grid-element">YAHTZEE!</div>                <div id = "yahtzee-score" class = "grid-element"><button id = "yahtzee-button" class = "score-element" onclick="clickScore(12)"></button></div>
+                    <div id = "bottom-total-label" class = "grid-element">Bottom Total</div>       <div id = "bottom-total-score" class = "grid-element"></div>
+                </div>
+
+                <span id = "roll-count-label">Rolls Left : 3</span>
+                <button id = "redo-button" onclick="revertScore()"></button>
+
+            </div>
+
+            <div id = "held-dice">
+
+                <div style = "margin-top: 3%">
+
+                    <!-- Draw dice -->
+                    <button class = "dice" id = "die1" style="float: left" onclick="clickDie(0)"></button>
+                    <button class = "dice" id = "die2" style="float: left" onclick="clickDie(1)"></button>
+                    <button class = "dice" id = "die3" style="float: left" onclick="clickDie(2)"></button>
+                    <button class = "dice" id = "die4" style="float: left" onclick="clickDie(3)"></button>
+                    <button class = "dice" id = "die5" style="float: left" onclick="clickDie(4)"></button>
+                </div>
+                <div style = "float: left; margin-left: 80%; margin-top: -6.8%;">
+                    <button id = "roll-button" onclick="rollDice()"></button>
+                </div>
+            </div>
+
+            <div id = "roll-zone">
+
+            </div>
+        </div>
+    </body>
+</html>
