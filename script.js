@@ -44,6 +44,7 @@ function setState(buttonID) {
             "•	Gimp and Photoshop for image editing and graphics creation<br>"+
             "•	Financial Accounting and Business Management in a practical environment<br>"+
             "•	Yahtzee game made in JS, HTML, and CSS<br>"
+            "•	Triage Logging App made using HTML, CSS, JS and SQL as well as the NodeJS framework and Express<br>"
         break
         case 2:
             divBlocks[0].innerHTML = "Anthony Dicaire<br>Achievements / Certifications"
